@@ -10,15 +10,24 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - run: npm install
-      - run: npm run build
-      - run: echo "" > dist/.nojekyll
+      - name: Install dependencies
+        working-directory: Webhost
+        run: npm install
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Build Astro
+        working-directory: Webhost
+        run: npm run build
+
+      - name: Disable Jekyll
+        run: echo "" > Webhost/dist/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: Webhost/dist
