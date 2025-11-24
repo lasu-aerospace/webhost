@@ -1,0 +1,32 @@
+<!DOCTYPE html><html> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>LASU | Próximo lanzamiento</title><script type="module" src="/_astro/tlv-1.astro_astro_type_script_index_0_lang.Ds9P6cqp.js"></script><style>@import"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap";body{background-color:#181818;color:#fff;font-family:Inter,sans-serif;font-weight:200;font-size:15px;margin:0;padding:0;overflow-x:hidden}.navbar{position:fixed;top:0;width:100%;height:60px;display:flex;justify-content:space-between;background-color:#0f0f0f;align-items:center;padding:15px 30px;box-sizing:border-box;transition:transform .3s ease,background-color .3s ease;z-index:1000;background-image:url(/images/navbar-bg.jpg);background-size:cover;background-position:center;background-repeat:no-repeat}nav a img{width:100px;display:flex;align-items:center;width:103px;height:auto}.navbar.scrolled{background-color:transparent}.navbar.hidden{transform:translateY(-100%)}.menu{display:flex;gap:20px}.menu a{text-decoration:none;font-size:1rem;color:#fff;position:relative}.menu a:after{content:"";position:absolute;bottom:-5px;left:0;width:0;height:1px;background-color:#fff;transition:width .3s ease}.menu a:hover:after{width:100%}.box{margin:20px auto;padding:20px;max-width:1000px;text-align:justify;line-height:1.6;font-size:1rem}.header{position:relative;background-image:url(https://static1.srcdn.com/wordpress/wp-content/uploads/2023/02/kerbal-space-program-2-2.jpg);height:100vh;background-size:cover;background-position:center;background-attachment:fixed;overflow-y:hidden}.header .text{position:absolute;bottom:10px;left:50px;color:#fff;font-size:3rem;opacity:0;animation:fadeUp 2.5s ease forwards}@keyframes fadeUp{0%{opacity:0;transform:translateZ(50px)}to{opacity:1;transform:translateY(0)}}@keyframes fillAnimation{0%{height:0%}to{height:100%}}button{position:relative;overflow:hidden;background-color:transparent}.button{color:#fff;background-color:transparent;border:1px solid white;padding:10px 20px;font-size:1rem;cursor:pointer}.container{display:flex;flex-direction:column;align-items:center;margin:0 auto;padding:20px;max-width:800px}.fill-button{position:relative;display:inline-block;padding:10px 20px;font-size:16px;font-weight:700;color:#fff;background-color:transparent;border:2px solid rgb(255,255,255);overflow:hidden;cursor:pointer;transition:color .3s ease}.fill-button:before{content:"";position:absolute;bottom:0;left:0;width:100%;height:0;background-color:#fff;z-index:-1;transition:height .3s ease}.fill-button:hover:before,.fill-button:focus:before{height:100%}.fill-button:hover,.fill-button:focus{color:#000}table{border-collapse:collapse;margin:20px auto;width:60%;max-width:600px;text-align:center}th,td{border:1px solid white;padding:10px}canvas{width:700px;height:700px;display:block;margin:10px auto;max-width:100%;max-height:100%}
+</style></head> <body> <script type="module" client:load>
+    let lastScrollPosition = 0;
+    const navbar1 = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+        const currentScrollPosition = window.pageYOffset;
+
+        if (currentScrollPosition > lastScrollPosition) {
+            // El usuario está desplazándose hacia abajo
+            navbar1.classList.add('hidden');
+        } else {
+            // El usuario está desplazándose hacia arriba
+            navbar1.classList.remove('hidden');
+        }
+
+        lastScrollPosition = currentScrollPosition;
+    });
+
+    const navbar2 = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        navbar2.classList.remove('scrolled');
+    } else {
+        navbar2.classList.add('scrolled');
+    };
+    });
+
+</script> <header> <nav class="navbar" id="navbar"> <a href="index.html"> <img src="/_astro/LASU_logo.CIJaaCTI.png" alt="LASU Logo"> </a> <div class="menu"> <a href="launches.html">Lanzamientos</a> <a href="about.html">Sobre Nosotros</a> <a href="contact.html">Contacto</a> </div> </nav> </header> <div> <p class="box" style="margin-top: 60px">TLV-1 (Test Launch Vehicle 1) es un prototipo de lanzamiento liviano, propulsado por pólvora, pero incapaz de poner cualquier carga en órbita.<br><br>El principal objetivo de la misión radica en procesar datos y enviar telemetría de aviónica para 
+                próximos prototipos, ya que todos poseerán la misma computadora de vuelo (Alnair Flight Computer) que los guiará durante el lanzamiento, destacada por su simplicidad y efectividad.<br><br>
+Se evaluarán las capacidades aerodinámicas, físicas, químicas, mecánicas y electrónicas para integrar una tecnología mejor en vista de los siguientes lanzamientos.<br><br>
+Aunque no esté disponible una fecha de lanzamiento oficial, estimamos oportunidades potenciales para el último cuartil de 2026.</p> <img src="/_astro/inverted_image.BuhTNRg5.png" class="box" alt="Inverted Image"> </div> </body></html>
