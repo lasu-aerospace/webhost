@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    background-color: #181818;
+    background-color: #000000;
     color: #ffffff;
     font-family: Inter, sans-serif;
     font-weight: 200;
@@ -18,16 +18,26 @@ body {
     height: 60px;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(15, 15, 15);
     align-items: center;
     padding: 15px 30px;
     box-sizing: border-box;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 1000;
-    background-image: url("/images/navbar-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.3s ease;;
+    background: linear-gradient(
+        to bottom,
+        rgb(0, 0, 0),
+        rgba(0, 0, 0, 0)
+    );
+    opacity: 1;
+    pointer-events: none;
 }
 
 nav a img {
@@ -38,10 +48,9 @@ nav a img {
     height: auto;
 }
 
-.navbar.scrolled {
-    background-color: transparent;
+.navbar.scrolled::before {
+    opacity: 0.5;
 }
-  
 
 .navbar.hidden {
     transform: translateY(-100%);
