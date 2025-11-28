@@ -22,7 +22,6 @@ body {
     padding: 15px 30px;
     box-sizing: border-box;
     transition: transform 0.3s ease;
-    z-index: 10;
     overflow: hidden;
 }
 
@@ -30,7 +29,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    transition: opacity 0.3s ease;;
+    transition: opacity 0.3s ease;
     background: linear-gradient(
         to bottom,
         rgb(0, 0, 0),
@@ -40,7 +39,7 @@ body {
     pointer-events: none;
 }
 
-nav a img {
+nav img {
     width: 100px;
     display: flex;
     align-items: center;
@@ -106,20 +105,20 @@ nav a img {
     position: absolute;
     bottom: 10px;
     left: 50px;
+    font-family: 'Montserrat';
     color: white;
     font-size: 3rem;
-    opacity: 0;
     animation: fadeUp 2.5s ease forwards;
 }
 
 @keyframes fadeUp {
     0% {
         opacity: 0;
-        transform: translateZ(50px);
+        transform: translateY(50px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0px);
     }
 }
 
